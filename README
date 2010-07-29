@@ -1,0 +1,35 @@
+Basic middleware to help developers track their memory usage.
+
+DO NOT USE IN PRODUCTION
+Currently only tested on Ruby 1.9 and no support guaranteed
+
+Output example:
+
+GC run, previous cycle was 255 requests ago.
+
+GC 40 invokes.
+Index    Invoke Time(sec)       Use Size(byte)     Total Size(byte)         Total Object                    GC Time(ms)
+    1               1.267              3094640              4063232               101432        14.47700000000007314327
+    2               1.391              3088480              4063232               101432        13.95699999999999718625
+    3               1.514              3091160              4063232               101432        13.84699999999994268762
+    4               1.643              3093400              4063232               101432        14.65799999999983782573
+    5               1.771              3094800              4063232               101432        15.47099999999979047516
+    6               1.899              3089200              4063232               101432        14.96900000000001007550
+    7               2.028              3091600              4063232               101432        17.90399999999969793407
+    8               2.164              3093320              4063232               101432        15.38599999999989975663
+    9               2.298              3091440              4063232               101432        15.29500000000005854872
+   10               2.432              3089800              4063232               101432        16.75899999999996836664
+   11               2.570              3093280              4063232               101432        14.70199999999977080734
+
+## 23900 freed objects. ##
+[60%] 14414 freed strings.
+[12%] 2927 freed arrays.
+[9%] 2268 freed big numbers.
+[2%] 564 freed hashes.
+[1%] 373 freed objects.
+[5%] 1351 freed parser nodes (eval usage).
+
+
+or:
+
+[GC Stats] 146 new allocated objects.
